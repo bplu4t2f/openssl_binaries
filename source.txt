@@ -1,0 +1,17 @@
+Source code:
+  https://github.com/openssl/openssl/releases/tag/openssl-3.0.0
+
+x86 built with:
+  ./Configure mingw --cross-compile-prefix=i686-w64-mingw32-
+  make
+
+  GCC version 5.3.1 20160211
+
+x64 built with:
+  ./Configure mingw64 --cross-compile-prefix=x86_64-w64-mingw32-
+  make
+
+  GCC version 5.3.1 20160211
+
+include/applink.c was copied manually from ms/applink.c because the build is bugged:
+  https://github.com/openssl/openssl/issues/16570
